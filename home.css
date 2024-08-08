@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    max-width: 1920px;
+    margin: auto;
+}
+
+header .container {
+    margin-bottom: 50px;
+    display: flex;
+    padding: 60px 80px;
+    justify-content: space-between;
+    box-shadow: 4px 7px 4px #00000025;
+}
+
+header .container h1 {
+    font-size: 34px;
+    color: #0E8AFF;
+}
+
+header .container h1 span {
+    color: black;
+}
+
+header .container .full-name {
+    display: flex;
+    flex-direction: column;
+}
+
+header .container .full-name h4 {
+    margin-bottom: 20px;
+}
+
+header .container .full-name a {
+    padding: 7px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #07B413;
+    border: 1px solid #07B413;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+header .container .full-name a:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.section {
+    margin-top: 30px;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.section .cards {
+    display: flex;
+    gap: 30px;
+    padding: 0px 130px;
+    flex-wrap: wrap;
+}
+
+.section .cards .card1 {
+    width: 380px;
+    height: auto;
+    border-radius: 10px 10px 0px 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.section .cards .card1 .top-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.section .cards .card1 .top-content img {
+    width: 200px;
+    max-width: 378px;
+    max-height: 450px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.section .cards .card1 .bottom-content {
+    text-align: start;
+    padding: 10px 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.section .cards .card1 .bottom-content h1 {
+    margin-bottom: 10px;
+}
+
+
+.section .cards .card1 .bottom-content h4 span,
+.section .cards .card1 .bottom-content h1 span{
+    font-weight: 400;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.section .cards .card1 .bottom-content .price {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    header .container {
+        flex-direction: column;
+        padding: 40px 60px;
+    }
+
+    .section .cards {
+        padding: 0px 40px;
+    }
+
+    .section .cards .card1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        padding: 30px 40px;
+    }
+
+    header .container h1 {
+        font-size: 28px;
+    }
+
+    .section .cards {
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    header .container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    header .container h1 {
+        font-size: 24px;
+    }
+
+    .section .cards {
+        padding: 0px 10px;
+    }
+
+    .section .cards .card1 {
+        width: 100%;
+    }
+}

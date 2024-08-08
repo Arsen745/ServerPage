@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+
+
+
+
+    .forms {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h2 {
+            font-weight: 400;
+            color: red;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        input {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 20px;
+            padding-right: 10px ;
+            width: 350px;
+            height: 35px;
+            border-radius: 5px;
+            background-color: #C6C6C6;
+            font-size: 18px;
+            border: none;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #5C5959;
+        }
+
+        button {
+            padding: 7px 155px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            background-color: #07B413;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+
+        }
+
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        width: 100%;
+        padding: 0px 20px;
+
+        .forms {
+            width: 100%;
+
+          
+            input {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+                padding: 7px 100px;
+            }
+        }
+
+
+    }
+
+}
