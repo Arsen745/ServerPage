@@ -78,6 +78,31 @@ body {
 
         .forms {
             width: 100%;
+            padding: 40px;
+
+          
+            input {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+                padding: 7px 100px;
+            }
+        }
+
+
+    }
+
+}
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        padding: 0px 20px;
+        margin-top: 200px;
+
+        .forms {
+            width: 100%;
+            padding: 40px;
 
           
             input {
