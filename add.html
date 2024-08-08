@@ -12,12 +12,12 @@
         <div class="forms">
             <h1></h1>
             <h4></h4>
-            <input id="name" type="text" placeholder="Названия товар..." required>
-            <input id="model" type="text" placeholder="Модель Товара..." required>
-            <input id="price" type="text" placeholder="Цена Товара...">
-            <input id="country" type="text" placeholder="Страна Произвотсво..." required>
-            <input id="image" type="text" placeholder="Ссылка на фото..." required>
-            <textarea placeholder="Напишите о товар..." name="" id="description" required></textarea>
+            <input id="name" type="text" placeholder="Названия товар..." required minlength="3">
+            <input id="model" type="text" placeholder="Модель Товара..." required minlength="3">
+            <input id="price" type="text" placeholder="Цена Товара..." required minlength="3">
+            <input id="country" type="text" placeholder="Страна Произвотсво..." required minlength="3">
+            <input id="image" type="text" placeholder="Ссылка на фото..." required minlength="3">
+            <textarea placeholder="Напишите о товар..." name="" id="description" required minlength="3"></textarea>
             <button onclick="Add()">Добавить Новый Товар</button>
             <a href="home.html">Вернутся Главную</a>
         </div>
