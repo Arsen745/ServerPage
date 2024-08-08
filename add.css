@@ -101,3 +101,8 @@ body {
 
     }
 }
+@media (max-width: 425px) {
+    .forms {
+        padding: 0px 20px;
+    }
+}
