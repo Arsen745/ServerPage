@@ -22,7 +22,7 @@ function Products(resource) {
                         <h1><span>Названия:</span> ${el.name}</h1>
                         <h4><span>Модель:</span> ${el.model}</h4>
                         <h4 class="price"><span>Цена:</span> ${el.price}</h4>
-                        <h4><span>Старан производство:</span> ${el.country}</h4>
+                        <h4><span>Стана производство:</span> ${el.country}</h4>
                     </div>
                 </div>`
                 

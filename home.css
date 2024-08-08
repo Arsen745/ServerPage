@@ -110,6 +110,7 @@ header .container .full-name a:hover {
 
 .section .cards .card1 .bottom-content h1 {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 
@@ -118,10 +119,11 @@ header .container .full-name a:hover {
     font-weight: 400;
     font-size: 16px;
     font-style: italic;
+    color: rgb(163, 162, 162);
 }
 
 .section .cards .card1 .bottom-content .price {
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -139,6 +141,17 @@ header .container .full-name a:hover {
 
     .section .cards .card1 {
         width: 100%;
+        h1 {
+            font-weight: 500;
+            font-size: 18px;
+
+            
+        }
+        h4 {
+            font-weight: 500;
+            font-size: 18px;
+
+        }
     }
 }
 
