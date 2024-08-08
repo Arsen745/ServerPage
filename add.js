@@ -17,7 +17,8 @@ const h4Text = document.querySelector('h4');
 const baseUrl = 'https://66b47fde9f9169621ea332aa.mockapi.io/';
 const apiUrl = baseUrl + value;
 
-function Add() {
+function Add(event) {
+    event.preventDefault();
     h4Text.innerHTML = '';
 
     // Check if all inputs are filled
