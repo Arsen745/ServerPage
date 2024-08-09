@@ -295,6 +295,7 @@ header .container .full-name a:hover {
         gap: 20px;
     }
     .modal {
+        height: 100%;
         overflow-y: scroll;
 
         input {
