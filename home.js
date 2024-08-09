@@ -3,18 +3,18 @@ const value = localStorage.getItem('value');
 const apiUrl = baseUrl + value;
 
 const resources = [
-    'VacuumCleaner', 'Fridge', 'FoodProcessor', 'iron', 'Freezer', 'Tv',
-    'Ariston', 'Steik', 'waffli', 'Blender', 'Mikser', 'Vitishka', 'Washing',
-    'Condis', 'Microvol', 'Duhovka', 'Plita', 'Teplovintel', 'Coffe', 'frity',
-    'Socovij', 'Miasorubka', 'Electriplita', 'Chainik', 'Nagrevatel', 'Vstoemyi',
-    'Otparivatel', 'PosydaMashine'
+    'VacuumCleaner', 'Fridge', 'iron', 'Freezer', 'Tv',
+    'Ariston', 'Mikser', 'Vitishka', 'Washing',
+    'Condis', 'Microvol', 'Duhovka', 'Plita',
+    'Electriplita', 'Chainik', 'Nagrevatel', 'Vstoemyi',
+
 ];
 const cards = document.querySelector(".cards")
 
 function Products(resource) {
     fetch(baseUrl + resource)
         .then(response => response.json())
-        .then((data) => {   
+        .then((data) => {
             for (const el of data) {
                 console.log(data);
                 cards.innerHTML += `            <div class="card1"> 
@@ -27,7 +27,7 @@ function Products(resource) {
                         <h4 class="price"><span>Цена:</span> ${el.price}</h4>
                         <h4><span>Стана производство:</span> ${el.country}</h4>
                             <button class="open-modal" onclick="OpenModal(${el.id}, '${el.name}', '${el.image}', '${el.model}', '${el.price}', '${el.country}', '${el.description}', '${el.values}')"
-                            >Изменить</button>
+                            >Изменить<i class="bi bi-pencil-square"></i></button>
                     </div>
                 </div>`
 
@@ -84,7 +84,7 @@ closeModalBtn.addEventListener('click', () => {
     modal.style.display = "none";
 
 
-} )
+})
 
 function Update(event, id) {
     event.preventDefault();
@@ -106,37 +106,44 @@ function Update(event, id) {
         },
         body: JSON.stringify(updatedData)
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
+        .then(response => response.json())
+        .then(data => {
+            modal.style.display = "none";
+            const successContainer = document.querySelector('.success');
 
-        // Закрыть модальное окно после обновления
-        modal.style.display = "none";
-    })
+            // Функция для показа контейнера
+            function showSuccess() {
+                successContainer.classList.add('show');
+                successContainer.classList.remove('hide');
+            }
+            showSuccess();
+
+            // Функция для скрытия контейнера
+            function hideSuccess() {
+                successContainer.classList.add('hide');
+                successContainer.classList.remove('show');
+            }
+            setTimeout(hideSuccess, 3000); 
+        })
 
 }
 
-// Вызовите функцию Update при нажатии кнопки для сохранения изменений
 saveButton.addEventListener('click', (event) => {
-    // Получаем элементы ввода из модального окна
     const inputs = [nameModal, modelModal, priceModal, countryModal, imageModal, descriptionModal];
     let allFilled = true;
 
-    // Проверяем, заполнены ли все поля
     inputs.forEach(input => {
         if (!input.value.trim()) {
             allFilled = false;
-            input.style.border = '2px solid red'; // Применяем красную рамку к пустым полям
-        } else {
-            input.style.border = ''; // Убираем красную рамку, если поле заполнено
+            input.style.border = '2px solid red';
+            input.style.border = '';
         }
     });
 
     if (allFilled) {
         const id = saveButton.getAttribute('data-id');
-        Update(event, id); // Вызываем функцию обновления, если все поля заполнены
+        Update(event, id);
     } else {
-        // Показываем сообщение об ошибке, если какие-то поля пустые
         errorMes.innerHTML = `<h4 style="color: red; 
         margin-top: 20px;">Заполните все поля формы</h4>`;
     }

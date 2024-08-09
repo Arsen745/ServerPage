@@ -21,6 +21,7 @@ header .container {
     padding: 60px 80px;
     justify-content: space-between;
     box-shadow: 4px 7px 4px #00000025;
+
 }
 
 header .container h1 {
@@ -83,6 +84,20 @@ header .container .full-name a:hover {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    .open-modal {
+        margin-top: 10px;
+        padding: 6px 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #07B413;
+        color: white;
+        cursor: pointer;
+        i {
+            margin-left: 10px;
+        }
+        
+    }
 
 }
 
@@ -146,7 +161,7 @@ header .container .full-name a:hover {
         padding: 20px;
 
         input {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             padding: 8px 15px;
             outline: none;
             border: none;
@@ -163,15 +178,18 @@ header .container .full-name a:hover {
             border-radius: 5px;
             resize: none;
             height: 200px;
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
 
 
         }
         label {
-            font-size: 14px;
-            color: white;
+            font-size: 17px;
+            color: rgb(232, 240, 233);
             font-style: italic;
             font-weight: bold;
             text-align: left;
+            margin-bottom: 10px;
         }
         .buttons {
             margin-top: 30px;
@@ -186,6 +204,7 @@ header .container .full-name a:hover {
                 color: white;
                 font-weight: bold;
                 letter-spacing: 1px;
+                cursor: pointer;
 
             }
             button:first-child {
@@ -198,6 +217,34 @@ header .container .full-name a:hover {
         }
     }
 }
+.success {
+    max-width: 1920px;
+    width: 1920px;
+    padding: 10px;
+    background-color: #07B413; 
+    color: white; 
+    position: fixed;
+    text-align: center;
+    top: 217px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    opacity: 0; 
+    transition: opacity 0.5s ease, top 0.5s ease; 
+    z-index: -1; 
+}
+
+.success.show {
+    top: 217px; 
+    opacity: 1; 
+    
+}
+
+.success.hide {
+    top: 217px; 
+    opacity: 0;
+
+}
+
 
 
 
