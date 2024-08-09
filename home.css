@@ -146,7 +146,7 @@ header .container .full-name a:hover {
 .modal {
     width: 100%;
     height: 100vh;
-    background-color: #00000099; /* Полупрозрачный черный, эквивалент #00000020 */
+    background-color: #00000099;
     position: fixed;
     inset: 0;
     transition: all 0.9s;
@@ -278,6 +278,21 @@ header .container .full-name a:hover {
 @media (max-width: 768px) {
     header .container {
         padding: 30px 40px;
+    }
+    .success {
+
+        top: 150px; 
+
+    }
+    
+    .success.show {
+        top: 150px; 
+        
+    }
+    
+    .success.hide {
+        top: 150px; 
+    
     }
     .modal {
         height: 100%;
