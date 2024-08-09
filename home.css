@@ -127,6 +127,78 @@ header .container .full-name a:hover {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.modal {
+    width: 100%;
+    height: 100vh;
+    background-color: #00000099; /* Полупрозрачный черный, эквивалент #00000020 */
+    position: fixed;
+    inset: 0;
+    transition: all 0.9s;
+    display: none;
+    .inputs {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        text-align: start;
+        padding: 20px;
+
+        input {
+            margin-bottom: 20px;
+            padding: 8px 15px;
+            outline: none;
+            border: none;
+            width: 400px;
+            border-radius: 5px;
+
+
+        }
+        textarea {
+            padding: 8px 15px;
+            outline: none;
+            border: none;
+            width: 400px;
+            border-radius: 5px;
+            resize: none;
+            height: 200px;
+
+
+        }
+        label {
+            font-size: 14px;
+            color: white;
+            font-style: italic;
+            font-weight: bold;
+            text-align: left;
+        }
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            width: 400px;
+            button {
+                font-size: 18px;
+                padding: 8px 15px;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                letter-spacing: 1px;
+
+            }
+            button:first-child {
+                background-color: #07B413;
+            }
+            button:last-child {
+                background-color: red;
+            }
+            
+        }
+    }
+}
+
 
 
 @media (max-width: 1024px) {
@@ -173,6 +245,19 @@ header .container .full-name a:hover {
     header .container {
         padding: 20px;
         gap: 20px;
+    }
+    .modal {
+
+        input {
+            width: 100% !important;
+        }
+        textarea {
+            width: 100% !important;
+
+        }
+    }
+    .buttons {
+        width: 100%;
     }
 
     header .container h1 {

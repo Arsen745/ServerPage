@@ -29,7 +29,8 @@ function Add(event) {
             price: priceInput.value,
             country: countryInput.value,
             image: imageInput.value,
-            description: descriptionInput.value
+            description: descriptionInput.value,
+            values: value
         };
 
         fetch(apiUrl, {
