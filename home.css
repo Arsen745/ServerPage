@@ -16,6 +16,7 @@ header {
 }
 
 header .container {
+    position: relative;
     margin-bottom: 50px;
     display: flex;
     padding: 60px 80px;
