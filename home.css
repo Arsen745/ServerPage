@@ -161,7 +161,7 @@ header .container .full-name a:hover {
         padding: 20px;
 
         input {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             padding: 8px 15px;
             outline: none;
             border: none;
@@ -177,7 +177,7 @@ header .container .full-name a:hover {
             width: 400px;
             border-radius: 5px;
             resize: none;
-            height: 200px;
+            height: 150px;
             font-family: "Roboto", sans-serif;
             font-size: 18px;
 
@@ -189,7 +189,7 @@ header .container .full-name a:hover {
             font-style: italic;
             font-weight: bold;
             text-align: left;
-            margin-bottom: 10px;
+        
         }
         .buttons {
             margin-top: 30px;
@@ -281,6 +281,9 @@ header .container .full-name a:hover {
     .modal {
         height: 100%;
         overflow-y: scroll;
+        .inputs {
+            margin-top: 10px;
+        }
 
     header .container h1 {
         font-size: 28px;
