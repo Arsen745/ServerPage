@@ -278,6 +278,7 @@ header .container .full-name a:hover {
     header .container {
         padding: 30px 40px;
     }
+    
 
     header .container h1 {
         font-size: 28px;
@@ -294,6 +295,7 @@ header .container .full-name a:hover {
         gap: 20px;
     }
     .modal {
+        overflow-y: scroll;
 
         input {
             width: 100% !important;
