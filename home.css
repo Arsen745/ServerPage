@@ -221,8 +221,9 @@ header .container .full-name a:hover {
 .success {
     max-width: 1920px;
     width: 1920px;
+
     padding: 10px;
-    background-color: #07B413; 
+    background-color: #00000099; 
     color: white; 
     position: fixed;
     text-align: center;
@@ -231,18 +232,34 @@ header .container .full-name a:hover {
     transform: translateX(-50%); 
     opacity: 0; 
     transition: opacity 0.5s ease, top 0.5s ease; 
-    z-index: -1; 
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+        background-color: #07B413;
+        color: white;
+        padding: 6px 20px;
+        border-radius: 5px;
+        i {
+            margin-left: 20px;
+
+        }
+    }
 }
 
 .success.show {
     top: 217px; 
     opacity: 1; 
+    height: 100vh;
     
 }
 
 .success.hide {
     top: 217px; 
     opacity: 0;
+    height: 100vh;
 
 }
 
